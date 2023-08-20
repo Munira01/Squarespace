@@ -1,0 +1,96 @@
+.nav{
+    background-color: black;
+    padding: 10px 0;
+    .container1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__ul{
+        display: flex;
+        color: white;
+        gap: 30px;
+        text-transform: uppercase;
+    }
+
+    &__input, &__label1, &__label2{
+        display: none;
+    }
+
+    &__form{
+        display: flex;
+        button{
+            text-transform: uppercase;
+            &:nth-child(1){
+                padding: 15px 30px;
+                background-color: transparent;
+                color: white;
+                cursor: pointer;
+                border: none;
+            }
+
+            &:nth-child(2){
+                padding: 15px 30px;
+                background-color: white;
+                cursor: pointer;
+                border: none;
+            }
+        }
+    }
+}
+
+@media (max-width:1024px){
+    .nav{
+        &__ul{
+            position: fixed;
+            top: 0;
+            left: -100%;
+            background-color: black;
+            width: 100%;
+            height: 100vh;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            transition: 0.3s;
+        }
+
+        &__form{
+            position: fixed;
+            top: 20%;
+            left: -100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            transition: 0.3s;
+        }
+
+        #check:checked ~ &__ul{
+            left: 0;
+        }
+
+        #check:checked ~ &__form{
+            left: 0;
+        }
+
+        &__label1{
+            display: block;
+            color: white;
+            font-size: 25px;
+        }
+
+        #check:checked ~ &__label1{
+            display: none;
+        }
+
+        #check:checked ~ &__label2{
+            display: block;
+            font-size: 25px;
+            color: white;
+            z-index: 2;
+        }
+    }
+}

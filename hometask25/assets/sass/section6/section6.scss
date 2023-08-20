@@ -1,0 +1,58 @@
+.section6{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+
+    h1{
+        font-size: 45px;
+        font-weight: 400;
+        padding-bottom: 10px;
+    }
+
+    p{
+        width: 37%;
+        text-align: center;
+        font-size: 22px;
+        padding-bottom: 10px;
+    }
+
+    a{
+        font-size: 22px;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+
+    &__card{
+        padding-top: 40px;
+
+        img{
+            width: 100%;
+        }
+
+        p{
+            width: 0;
+        }
+    }
+}
+
+
+@media (max-width:768px){
+    .section6{
+        padding-bottom: 20px;
+        h1{
+            text-align: center;
+            font-size: 35px;
+        }
+
+        p{
+            width: 100%;
+            font-size: 18px;
+        }
+
+        a{
+            font-size: 18px;
+        }
+    }
+}

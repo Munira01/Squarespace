@@ -1,0 +1,79 @@
+.section4{
+    .container1{
+        display: flex;
+        align-items: center;
+    }
+
+    &__left{
+        img{
+            width: 90%;
+        }
+    }
+
+    &__right{
+        display: flex;
+        flex-direction: column;
+        padding-left: 150px;
+        width: 50%;
+
+        h1{
+            font-size: 40px;
+            font-weight: 400;
+        }
+
+        p{
+            padding: 20px 0;
+            width: 90%;
+            font-size: 22px;
+        }
+    }
+}
+
+@media (max-width:1024px){
+    .section4{
+        .container1{
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__left{
+            display: none;
+        }
+
+        &__right{
+            background: linear-gradient(rgba(0, 0, 0, 0.607), rgba(0, 0, 0, 0.744)), url(/assets/media/photo_2022-08-18_22-33-47.jpg);
+            width: 60%;
+            height: 60vh;
+            justify-content: center;
+            padding-left: 0;
+            color: white;
+
+            h1{
+                text-align: center;
+            }
+
+            p{
+                text-align: center;
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width:768px){
+    .section4{
+        &__right{
+            h1{
+                font-size: 35px;
+            }
+
+            p{
+                font-size: 18px;
+            }
+            width: 90%;
+        }
+    }
+}
